@@ -104,7 +104,8 @@ public class BasePlusCommissionEmployee {
         sb.append(String.format("Date Birthed: %s\n", DateParser.convertDateToString(this.empBirthDate)));
         sb.append(String.format("Total Sales: %.2f\n", this.totalSales));
         sb.append(String.format("Base Salary: %.2f\n", this.baseSalary));
-        
+        sb.append(String.format("Salary: %.2f\n", this.computeSalary()));
+
         System.out.println(sb.toString());
     }
 
@@ -117,7 +118,6 @@ public class BasePlusCommissionEmployee {
         sb.append(String.format("Date Birthed: %s\n", DateParser.convertDateToString(this.empBirthDate)));
         sb.append(String.format("Total Sales: %.2f\n", this.totalSales));
         sb.append(String.format("Base Salary: %.2f\n", this.baseSalary));
-        sb.append(String.format("Salary: %.2f\n", this.computeSalary()));
         
         return sb.toString();
     }
