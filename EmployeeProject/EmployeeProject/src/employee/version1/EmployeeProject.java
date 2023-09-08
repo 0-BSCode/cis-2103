@@ -19,10 +19,12 @@ public class EmployeeProject {
         HourlyEmployee hEmp = new HourlyEmployee(0, "Bryan", "08/09/2022", "09/02/2002", 45f, 10f);
         PieceWorkerEmployee pEmp = new PieceWorkerEmployee(0, "Bryan", "08/09/2022", "09/02/2002", 500, 10f);
         CommissionEmployee cEmp = new CommissionEmployee(0, "Bryan", "07/08/2023", "09/02/2002", 107000.0);
-        System.out.println(hEmp);
+        BasePlusCommissionEmployee bcEmp = new BasePlusCommissionEmployee(0, "Bryan", "07/08/2023", "09/02/2002", 107000.0, 15.0);
+
         hEmp.displayInfo();
-        System.out.println(cEmp);
+        pEmp.displayInfo();
         cEmp.displayInfo();
+        bcEmp.displayInfo();
     }
     
 }
