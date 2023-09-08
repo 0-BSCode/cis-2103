@@ -59,6 +59,10 @@ public class HourlyEmployee {
         return empDateHired;
     }
 
+    public void setEmpDateHired(Date empDateHired) {
+        this.empDateHired = empDateHired;
+    }
+    
     public void setEmpDateHired(String empDateHired) {
         this.empDateHired = DateParser.convertStringToDate(empDateHired);
     }
@@ -67,6 +71,10 @@ public class HourlyEmployee {
         return empBirthDate;
     }
 
+    public void setEmpBirthDate(Date empBirthDate) {
+        this.empBirthDate = empBirthDate;
+    }
+    
     public void setEmpBirthDate(String empBirthDate) {
         this.empBirthDate = DateParser.convertStringToDate(empBirthDate);
     }
