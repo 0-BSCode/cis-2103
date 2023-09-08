@@ -101,7 +101,8 @@ public class CommissionEmployee {
         sb.append(String.format("Date Hired: %s\n", DateParser.convertDateToString(this.empDateHired)));
         sb.append(String.format("Date Birthed: %s\n", DateParser.convertDateToString(this.empBirthDate)));
         sb.append(String.format("Total Sales: %.2f\n", this.totalSales));
-        
+        sb.append(String.format("Salary: %.2f\n", this.computeSalary()));
+       
         System.out.println(sb.toString());
     }
 
@@ -113,7 +114,6 @@ public class CommissionEmployee {
         sb.append(String.format("Date Hired: %s\n", DateParser.convertDateToString(this.empDateHired)));
         sb.append(String.format("Date Birthed: %s\n", DateParser.convertDateToString(this.empBirthDate)));
         sb.append(String.format("Total Sales: %.2f\n", this.totalSales));
-        sb.append(String.format("Salary: %.2f\n", this.computeSalary()));
         
         return sb.toString();
     }
