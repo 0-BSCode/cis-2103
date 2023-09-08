@@ -107,6 +107,7 @@ public class HourlyEmployee {
         sb.append(String.format("Date Birthed: %s\n", DateParser.convertDateToString(this.empBirthDate)));
         sb.append(String.format("Total Hours Worked: %.2f\n", this.totalHoursWorked));
         sb.append(String.format("Rate per Hour: %.2f\n", this.ratePerHour));
+        sb.append(String.format("Salary: %.2f\n", this.computeSalary()));
         
         System.out.println(sb.toString());
     }
@@ -120,7 +121,6 @@ public class HourlyEmployee {
         sb.append(String.format("Date Birthed: %s\n", DateParser.convertDateToString(this.empBirthDate)));
         sb.append(String.format("Total Hours Worked: %.2f\n", this.totalHoursWorked));
         sb.append(String.format("Rate per Hour: %.2f\n", this.ratePerHour));
-        sb.append(String.format("Salary: %.2f\n", this.computeSalary()));
         
         return sb.toString();
     }
