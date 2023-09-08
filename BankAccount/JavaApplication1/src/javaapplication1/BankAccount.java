@@ -70,14 +70,13 @@ public class BankAccount {
         String msg;
         if (newBalance < 0 || newBalance >= this.accountBalance) {
             msg = String.format("Withdrawal invalid! Your account balance is %.2f", this.accountBalance);
-            System.out.println(msg);
         } else {
             this.accountBalance = newBalance;
             msg = String.format("Withdrawal successful! Your remaining account balance is %.2f", newBalance);
-            System.out.println(msg);
             res = true;
         }
         
+        System.out.println(msg);
         return res;
     }
     
@@ -88,13 +87,27 @@ public class BankAccount {
         if (amount > 0) {
             this.accountBalance = this.accountBalance + amount;
             msg = String.format("Deposit successful! Your new account balance is %.2f", this.accountBalance);
-            System.out.println(msg);
             res = true;
         } else {
             msg = String.format("Deposit invalid! Your remaining account balance is %.2f", this.accountBalance);
-            System.out.println(msg);
+        }
+
+        System.out.println(msg);
+        return res;
+    }
+    
+    public boolean transfer(BankAccount to, float amount) {
+        boolean res = false;
+        String msg;
+        
+        if (this.withdrawFunds(amount) && to.depositFunds(amount)) {
+            res = true;
+            msg = String.format("Transfer successful!");
+        } else {
+            msg = String.format("Transfer unsuccessful!");
         }
         
+        System.out.println(msg);
         return res;
     }
 }
