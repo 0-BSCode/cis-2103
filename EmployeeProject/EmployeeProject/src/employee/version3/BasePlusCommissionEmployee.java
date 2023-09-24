@@ -23,7 +23,7 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
     }
     
     public BasePlusCommissionEmployee(int empID, String fname, String lname, String mname, String empDateHired, String empBirthDate, double totalSales, double baseSalary) {
-        super(empID, fname, lname, mname, empDateHired, empBirthDate);
+        super(empID, fname, lname, mname, empDateHired, empBirthDate, totalSales);
         this.baseSalary = baseSalary;
     }
 
