@@ -55,8 +55,8 @@ public class PieceWorkerEmployee extends Employee {
     public void displayInfo() {
         StringBuilder sb = new StringBuilder();
         super.displayInfo();
-        sb.append(String.format("Total Hours Worked: %d\n", this.totalPiecesFinished));
-        sb.append(String.format("Rate per Hour: %.2f\n", this.ratePerPiece));
+        sb.append(String.format("Total Pieces Finished: %d\n", this.totalPiecesFinished));
+        sb.append(String.format("Rate per Piece: %.2f\n", this.ratePerPiece));
         
         System.out.println(sb.toString());
     }
@@ -66,8 +66,8 @@ public class PieceWorkerEmployee extends Employee {
         StringBuilder sb = new StringBuilder();
         String parentString = super.toString();
         sb.append(parentString);
-        sb.append(String.format("Total Hours Worked: %d\n", this.totalPiecesFinished));
-        sb.append(String.format("Rate per Hour: %.2f\n", this.ratePerPiece));
+        sb.append(String.format("Total Pieces Finished: %d\n", this.totalPiecesFinished));
+        sb.append(String.format("Rate per Piece: %.2f\n", this.ratePerPiece));
         sb.append(String.format("Salary: %.2f\n", this.computeSalary()));
         
         return sb.toString();
