@@ -62,11 +62,12 @@ public class Employee {
     public void displayInfo() {
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("\n----- EMPLOYEE INFORMATION -----\n"));
-        sb.append(String.format("ID: %d\n", this.empID));
-        sb.append(String.format("Name: %s\n", this.empName.toString()));
-        sb.append(String.format("Date Hired: %s\n", DateParser.convertDateToString(this.empDateHired)));
-        sb.append(String.format("Date Birthed: %s", DateParser.convertDateToString(this.empBirthDate)));
-        
+        sb.append(this);
+//        sb.append(String.format("ID: %d\n", this.empID));
+//        sb.append(String.format("Name: %s\n", this.empName.toString()));
+//        sb.append(String.format("Date Hired: %s\n", DateParser.convertDateToString(this.empDateHired)));
+//        sb.append(String.format("Date Birthed: %s", DateParser.convertDateToString(this.empBirthDate)));
+//
         System.out.println(sb.toString());
     }
 
